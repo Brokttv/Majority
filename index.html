@@ -707,7 +707,7 @@
     Training directly with saturated attention produces qualitatively different behavior, as shown in the bottom panels of Figure 2. Across 10 seeds, only 5/10 recover a correct solution under odd-length training and 4/10 under even-length training. The failed seeds do not form a consistent alternative attractor — they scatter across all four quadrants: strong positive clustering, near-zero weights, and inverted clustering (<span class="m">Δ &lt; 0</span>) all appear. When saturated training succeeds, it does so through two distinct routes: clustering similar to softmax (<span class="m">Δ ≈ 1.0–1.5</span>), or in isolated cases extreme clustering — seed 4 reaches <span class="m">Δ ≈ 13.47</span> under even-length training and <span class="m">Δ ≈ 11.96</span> under odd-length training. Seed 8 is the sole exception, converging near the hand-crafted construction (<span class="m">Δ ≈ 0.09</span>) and succeeding — the only instance where a trained model approaches uniform attention. There is no reliable path to it, and the mechanism varies widely across runs.
 
   <p>
-    That said, the ~50% success rate reflects a low-data regime. With substantially more training samples (10,000–30,000), saturated training solves MAJORITY reliably — converging to clustering solutions comparable to softmax, and occasionally to more extreme values, but never to the hand-crafted uniform-attention construction.
+    That said, the ~50% success rate reflects a low-data regime. With substantially more training samples (10,000–30,000), saturated training solves MAJORITY reliably — converging to multiple clustering solutions, but never to the hand-crafted uniform-attention construction.
   </p>
   </p>
 
@@ -919,6 +919,7 @@ https://brokttv.github.io/Blog-1/</pre>
 
 </body>
 </html>
+
 
 
 
